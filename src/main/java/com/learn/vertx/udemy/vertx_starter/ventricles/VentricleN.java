@@ -8,6 +8,7 @@ public class VentricleN extends AbstractVerticle {
   @Override
   public void start(Promise<Void> startPromise) {
     System.out.println("Start " + getClass().getName() + " on thread " + Thread.currentThread().getName());
+    System.out.println("Start " + getClass().getName() + " with config " + config().toString());
     startPromise.complete();
   }
 }
