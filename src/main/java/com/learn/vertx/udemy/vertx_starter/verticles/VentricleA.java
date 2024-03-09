@@ -1,4 +1,4 @@
-package com.learn.vertx.udemy.vertx_starter.ventricles;
+package com.learn.vertx.udemy.vertx_starter.verticles;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Promise;
