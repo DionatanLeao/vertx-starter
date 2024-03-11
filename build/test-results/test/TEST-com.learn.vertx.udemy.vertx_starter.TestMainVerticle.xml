@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.learn.vertx.udemy.vertx_starter.TestMainVerticle" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-04T20:44:04" hostname="DESKTOP-4DPPT9A" time="0.914">
+<testsuite name="com.learn.vertx.udemy.vertx_starter.TestMainVerticle" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-11T14:33:24" hostname="DESKTOP-4DPPT9A" time="0.811">
   <properties/>
-  <testcase name="verticle_deployed(Vertx, VertxTestContext)" classname="com.learn.vertx.udemy.vertx_starter.TestMainVerticle" time="0.914"/>
+  <testcase name="verticle_deployed(Vertx, VertxTestContext)" classname="com.learn.vertx.udemy.vertx_starter.TestMainVerticle" time="0.811"/>
   <system-out><![CDATA[HTTP server started on port 8888
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
