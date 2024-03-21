@@ -41,6 +41,7 @@ dependencies {
   implementation("org.apache.logging.log4j:log4j-core")
   implementation("org.apache.logging.log4j:log4j-slf4j-impl")
   implementation("org.slf4j:slf4j-api:1.7.30")
+  implementation("junit:junit:4.13.1")
   testImplementation("io.vertx:vertx-junit5")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
 }
