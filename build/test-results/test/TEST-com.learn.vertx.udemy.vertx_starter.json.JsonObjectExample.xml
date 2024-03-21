@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.learn.vertx.udemy.vertx_starter.json.JsonObjectExample" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-21T02:56:32" hostname="DESKTOP-4DPPT9A" time="0.258">
+<testsuite name="com.learn.vertx.udemy.vertx_starter.json.JsonObjectExample" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-21T03:03:58" hostname="DESKTOP-4DPPT9A" time="0.033">
   <properties/>
-  <testcase name="jsonObjectCanBeMapped()" classname="com.learn.vertx.udemy.vertx_starter.json.JsonObjectExample" time="0.258"/>
+  <testcase name="jsonObjectCanBeCreatedFromMap()" classname="com.learn.vertx.udemy.vertx_starter.json.JsonObjectExample" time="0.033"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,12 +1,12 @@
 package com.learn.vertx.udemy.vertx_starter.json;
 
 import io.vertx.core.json.JsonObject;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class JsonObjectExample {
 
@@ -18,10 +18,10 @@ public class JsonObjectExample {
     myJsonObject.put("loves_vertx", true);
 
     final String encoded = myJsonObject.encode();
-    Assertions.assertEquals("{\"id\":1,\"name\":\"Alice\",\"loves_vertx\":true}", encoded);
+    assertEquals("{\"id\":1,\"name\":\"Alice\",\"loves_vertx\":true}", encoded);
 
     final JsonObject decodedJsonObject = new JsonObject(encoded);
-    Assertions.assertEquals(myJsonObject, decodedJsonObject);
+    assertEquals(myJsonObject, decodedJsonObject);
   }
 
   @Test
@@ -32,7 +32,9 @@ public class JsonObjectExample {
     myMap.put("loves_vertx", true);
 
     final JsonObject asJsonObject = new JsonObject(myMap);
-    Assertions.assertEquals(myMap, asJsonObject.getMap());
+    assertEquals(myMap, asJsonObject.getMap());
+    assertEquals(1, asJsonObject.getInteger("id"));
+    assertEquals("Alice", asJsonObject.getString("name"));
+    assertEquals(true, asJsonObject.getBoolean("loves_vertx"));
   }
-
 }
