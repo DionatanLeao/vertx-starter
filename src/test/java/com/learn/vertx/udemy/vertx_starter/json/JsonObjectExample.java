@@ -49,4 +49,19 @@ public class JsonObjectExample {
       .add("randomValue");
     assertEquals("[{\"id\":1},{\"id\":2},{\"id\":3},\"randomValue\"]", myJsonArray.encode());
   }
+
+  @Test
+  void canMapJavaObjects() {
+    Person person = new Person(1, "Alice", true);
+    JsonObject alice = JsonObject.mapFrom(person);
+
+    assertEquals(person.getId(), alice.getInteger("id"));
+    assertEquals(person.getName(), alice.getString("name"));
+    assertEquals(person.isLovesVertx(), alice.getBoolean("lovesVertx"));
+
+    Person personMap = alice.mapTo(Person.class);
+    assertEquals(person.getId(), personMap.getId());
+    assertEquals(person.getName(), personMap.getName());
+    assertEquals(person.isLovesVertx(), personMap.isLovesVertx());
+  }
 }
