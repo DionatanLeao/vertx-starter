@@ -26,16 +26,19 @@ public class PingPongExample {
 
     @Override
     public void start(Promise<Void> startPromise) throws Exception {
-      startPromise.complete();
+      var eventBus = vertx.eventBus();
       final Ping message = new Ping("Hello", true);
       LOG.debug("Sending: {}", message);
-      vertx.eventBus().<Pong>request(ADDRESS, message, reply -> {
+      // Register only once
+      eventBus.registerDefaultCodec(Ping.class, new LocalMessageCodec<>(Ping.class));
+      eventBus.<Pong>request(ADDRESS, message, reply -> {
         if (reply.failed()) {
           LOG.error("Failed: ", reply.cause());
           return;
         }
         LOG.debug("Response: {}", reply.result().body());
       });
+      startPromise.complete();
     }
   }
 
@@ -44,13 +47,16 @@ public class PingPongExample {
 
     @Override
     public void start(Promise<Void> startPromise) throws Exception {
-      startPromise.complete();
-      vertx.eventBus().<Ping>consumer(PingVerticle.ADDRESS, message -> {
+      var eventBus = vertx.eventBus();
+      // Register only once
+      eventBus.registerDefaultCodec(Pong.class, new LocalMessageCodec<>(Pong.class));
+      eventBus.<Ping>consumer(PingVerticle.ADDRESS, message -> {
         LOG.debug("Received Message: {}", message.body());
         message.reply(new Pong(0));
       }).exceptionHandler(error -> {
         LOG.error("Error: ", error);
       });
+      startPromise.complete();
     }
   }
 }
