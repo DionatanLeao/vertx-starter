@@ -1,1 +1,21 @@
-"HTTP server started on port 8888
+Y[34m22:13:00.828[m [Test worker] DEBUG [35mc.l.v.u.v.FuturePromiseExample[m - Start
+l[34m22:13:01.393[m [vert.x-eventloop-thread-0] DEBUG [35mc.l.v.u.v.FuturePromiseExample[m - Result: {}
+%java.lang.RuntimeException: Failed!
+~	at com.learn.vertx.udemy.vertx_starter.FuturePromiseExample.lambda$futureFailure$4(FuturePromiseExample.java:62) ~[test/:?]
+p	at io.vertx.core.impl.VertxImpl$InternalTimerHandler.handle(VertxImpl.java:1056) [vertx-core-4.5.3.jar:4.5.3]
+p	at io.vertx.core.impl.VertxImpl$InternalTimerHandler.handle(VertxImpl.java:1027) [vertx-core-4.5.3.jar:4.5.3]
+\	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:335) [vertx-core-4.5.3.jar:4.5.3]
+\	at io.vertx.core.impl.ContextImpl.emit(ContextImpl.java:328) [vertx-core-4.5.3.jar:4.5.3]
+d	at io.vertx.core.impl.ContextInternal.emit(ContextInternal.java:206) [vertx-core-4.5.3.jar:4.5.3]
+m	at io.vertx.core.impl.VertxImpl$InternalTimerHandler.run(VertxImpl.java:1045) [vertx-core-4.5.3.jar:4.5.3]
+v	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98) [netty-common-4.1.106.Final.jar:4.1.106.Final]
+É	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:153) [netty-common-4.1.106.Final.jar:4.1.106.Final]
+ã	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) [netty-common-4.1.106.Final.jar:4.1.106.Final]
+è	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) [netty-common-4.1.106.Final.jar:4.1.106.Final]
+ó	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470) [netty-common-4.1.106.Final.jar:4.1.106.Final]
+t	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) [netty-transport-4.1.106.Final.jar:4.1.106.Final]
+ë	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.106.Final.jar:4.1.106.Final]
+~	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.106.Final.jar:4.1.106.Final]
+ä	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.106.Final.jar:4.1.106.Final]
+1	at java.lang.Thread.run(Thread.java:834) [?:?]
+m[34m22:13:01.433[m [vert.x-eventloop-thread-0] DEBUG [35mc.l.v.u.v.FuturePromiseExample[m - Timer done.
