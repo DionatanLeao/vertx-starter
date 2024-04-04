@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.learn.vertx.udemy.vertx_starter.FuturePromiseExample" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-03T12:17:22" hostname="DESKTOP-4DPPT9A" time="1.446">
-  <properties/>
-  <testcase name="futureComposition(Vertx, VertxTestContext)" classname="com.learn.vertx.udemy.vertx_starter.FuturePromiseExample" time="1.446"/>
-  <system-out><![CDATA[?[34m09:17:23.554?[m [vert.x-eventloop-thread-0] DEBUG ?[35mc.l.v.u.v.FuturePromiseExample?[m - Success
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
