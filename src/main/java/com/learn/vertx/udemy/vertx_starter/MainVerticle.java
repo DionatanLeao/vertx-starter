@@ -31,7 +31,10 @@ public class MainVerticle extends AbstractVerticle {
       }
     });
     vertx.setPeriodic(500, id -> {
-      LOG.debug(String.valueOf(new Random().nextDouble()));
+      LOG.info("Periodic delay 500: " + new Random().nextDouble());
+    });
+    vertx.setPeriodic(100, id -> {
+      LOG.info("Periodic delay 100: " + new Random().nextDouble());
     });
   }
 }
