@@ -6,6 +6,7 @@ plugins {
   application
   id("com.github.johnrengelman.shadow") version "7.1.2"
   id("io.spring.dependency-management") version "1.0.1.RELEASE"
+  id("com.google.cloud.tools.jib") version "2.7.1"
 }
 
 group = "com.learn.vertx.udemy"
@@ -51,6 +52,20 @@ dependencies {
 java {
   sourceCompatibility = JavaVersion.VERSION_11
   targetCompatibility = JavaVersion.VERSION_11
+}
+
+jib {
+  from {
+    image = "amazoncorretto:11"
+  }
+  to {
+    image = "example/jib/vertx-starter"
+  }
+  container {
+    mainClass = "io.vertx.core.Launcher"
+    args = listOf("run", mainVerticleName)
+    ports = listOf("8888")
+  }
 }
 
 tasks.withType<ShadowJar> {

@@ -9,15 +9,10 @@ import org.slf4j.LoggerFactory;
 import java.util.Random;
 
 public class MainVerticle extends AbstractVerticle {
-
-  public static void main(String[] args) {
-    var vertx = Vertx.vertx();
-    vertx.deployVerticle(new MainVerticle());
-  }
+    private static final Logger LOG = LoggerFactory.getLogger(MainVerticle.class);
 
   @Override
   public void start(Promise<Void> startPromise) throws Exception {
-    final Logger LOG = LoggerFactory.getLogger(MainVerticle.class);
     vertx.createHttpServer().requestHandler(req -> {
       req.response()
         .putHeader("content-type", "text/plain")
